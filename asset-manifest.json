@@ -1,26 +1,27 @@
 {
   "files": {
-    "main.css": "/personnalStylist/static/css/main.8b545640.chunk.css",
-    "main.js": "/personnalStylist/static/js/main.ffdcc784.chunk.js",
-    "main.js.map": "/personnalStylist/static/js/main.ffdcc784.chunk.js.map",
-    "runtime-main.js": "/personnalStylist/static/js/runtime-main.ab36ad40.js",
-    "runtime-main.js.map": "/personnalStylist/static/js/runtime-main.ab36ad40.js.map",
+    "main.css": "/personnalStylist/static/css/main.900a4afe.chunk.css",
+    "main.js": "/personnalStylist/static/js/main.a5334c26.chunk.js",
+    "main.js.map": "/personnalStylist/static/js/main.a5334c26.chunk.js.map",
+    "runtime-main.js": "/personnalStylist/static/js/runtime-main.9b9a508b.js",
+    "runtime-main.js.map": "/personnalStylist/static/js/runtime-main.9b9a508b.js.map",
     "static/css/2.16d2c739.chunk.css": "/personnalStylist/static/css/2.16d2c739.chunk.css",
-    "static/js/2.2803ab23.chunk.js": "/personnalStylist/static/js/2.2803ab23.chunk.js",
-    "static/js/2.2803ab23.chunk.js.map": "/personnalStylist/static/js/2.2803ab23.chunk.js.map",
-    "static/js/3.7edadc97.chunk.js": "/personnalStylist/static/js/3.7edadc97.chunk.js",
-    "static/js/3.7edadc97.chunk.js.map": "/personnalStylist/static/js/3.7edadc97.chunk.js.map",
+    "static/js/2.694a9fb7.chunk.js": "/personnalStylist/static/js/2.694a9fb7.chunk.js",
+    "static/js/2.694a9fb7.chunk.js.map": "/personnalStylist/static/js/2.694a9fb7.chunk.js.map",
+    "static/js/3.c2c2cebe.chunk.js": "/personnalStylist/static/js/3.c2c2cebe.chunk.js",
+    "static/js/3.c2c2cebe.chunk.js.map": "/personnalStylist/static/js/3.c2c2cebe.chunk.js.map",
     "index.html": "/personnalStylist/index.html",
     "static/css/2.16d2c739.chunk.css.map": "/personnalStylist/static/css/2.16d2c739.chunk.css.map",
-    "static/css/main.8b545640.chunk.css.map": "/personnalStylist/static/css/main.8b545640.chunk.css.map",
-    "static/js/2.2803ab23.chunk.js.LICENSE.txt": "/personnalStylist/static/js/2.2803ab23.chunk.js.LICENSE.txt",
+    "static/css/main.900a4afe.chunk.css.map": "/personnalStylist/static/css/main.900a4afe.chunk.css.map",
+    "static/js/2.694a9fb7.chunk.js.LICENSE.txt": "/personnalStylist/static/js/2.694a9fb7.chunk.js.LICENSE.txt",
+    "static/media/phone.cff2311e.png": "/personnalStylist/static/media/phone.cff2311e.png",
     "static/media/project.8f07c49a.png": "/personnalStylist/static/media/project.8f07c49a.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.ab36ad40.js",
+    "static/js/runtime-main.9b9a508b.js",
     "static/css/2.16d2c739.chunk.css",
-    "static/js/2.2803ab23.chunk.js",
-    "static/css/main.8b545640.chunk.css",
-    "static/js/main.ffdcc784.chunk.js"
+    "static/js/2.694a9fb7.chunk.js",
+    "static/css/main.900a4afe.chunk.css",
+    "static/js/main.a5334c26.chunk.js"
   ]
 }
