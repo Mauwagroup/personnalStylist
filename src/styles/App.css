@@ -1,16 +1,50 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-.App {
+.App,
+body {
   text-align: center;
 }
 
 a {
   text-decoration: none;
-  color: #999999;
+  color: #adadad;
   transition: 1s;
 }
 
-a:hover {
+.links {
+  color: #fff;
+  transition: 1s;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+a:hover,
+.links:hover {
   color: #fb4b74;
+}
+
+.dropdown-menu li {
+  margin-bottom: 0.2rem;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.dropdown-menu {
+  margin-top: 0;
+}
+
+.subLink:hover,
+.active-subLink {
+  color: #fff !important;
+  border-radius: 10px 0 10px 0 !important;
+  background-color: #fb4b74 !important;
+}
+
+.subLink {
+  margin: "0 .8rem .2rem" !important;
+}
+
+.h1-alternative {
+  font-size: 4rem;
 }
 
 h1 {
@@ -37,7 +71,152 @@ h6 {
   font-size: 0.9rem;
 }
 
-#icon1, #icon2{
+.contact-link{
+  font-size: 0.9rem;
+  color: #282c34;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.link-box {
+  border: 8px solid #fff;
+  border-left: none;
+}
+
+#firstBox {
+  border: 8px solid #fff;
+}
+
+.img-link{
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.img-link h2 {
+  color: #fb4b74;
+  transition: 1s;
+  margin: -45px 0 0;
+  font-size: 0;
+}
+
+.img-link div{
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 1s;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.img-link img {
+  transition: 1s;
+}
+
+.img-link:hover img {
+  filter: brightness(0.5);
+}
+
+.img-link:hover h2 {
+  font-size: 64px;
+}
+
+.logo-visible {
+  opacity: 0;
+  animation: show-logo .5s ease-in-out forwards;
+}
+
+@keyframes show-logo {
+  100% {
+    opacity: 1;
+  }
+}
+
+.logo-hidden {
+  opacity: 0;
+  animation: hide-logo 2s ease-in-out forwards;
+}
+
+@keyframes hide-logo {
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.black-bg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.basketContainer {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 100;
+}
+
+.basketIcon {
+  color: #fff;
+}
+
+.basketIconWrapper {
+  background-color: #fb4b74;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  width: 60px;
+  height: 50px;
+  transition: 0.3s;
+}
+
+.basketWrapper {
+  height: 50px;
+  max-width: 0;
+  transition: 0.7s;
+  justify-content: center;
+  position: relative;
+  right: -100%;
+  z-index: 0;
+  background-color: #000;
+  border-radius: 4px 0px 0px 4px;
+}
+
+.basketIconText {
+  color: white;
+  margin: 0 5px;
+}
+
+.bIconContainer {
+  margin: 0 0 3px;
+}
+
+.bIconContainer:hover .basketIconWrapper {
+  width: 70px;
+}
+
+.bIconContainer:hover .basketWrapper {
+  max-width: 500px;
+  right: 0;
+}
+
+.grid {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#icon1,
+#icon2 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,16 +229,17 @@ h6 {
   background-color: #63636333;
 }
 
-.headerText{
+.headerText {
   margin: 0;
 }
 
-#icon2{
+#icon2 {
   margin-right: 0;
   margin-left: 15px;
 }
 
-#icon1:hover, #icon2:hover{
+#icon1:hover,
+#icon2:hover {
   color: #fff;
   background-color: #fb4b74;
 }
@@ -70,8 +250,8 @@ h6 {
 
 .separator {
   margin: 30px auto;
-  border-top: 1px solid #fb4b74;
-  border-bottom: 1px solid #fb4b74;
+  border-top: 2px solid #fb4b74;
+  border-bottom: 2px solid #fb4b74;
   width: 20%;
   height: 4px;
 }
@@ -99,6 +279,8 @@ h6 {
 .nav-link {
   color: #4d4d4d;
   font-weight: 500;
+  padding: 0.5em 0.8em;
+  margin: 0 0.2rem;
   transition: 1s;
 }
 
@@ -107,6 +289,29 @@ h6 {
   color: #fb4b74;
   background-color: #63636333;
   border-radius: 10px 0 10px 0;
+}
+
+.nav-link:hover {
+  color: #fb4b74;
+  background-color: #63636333;
+  border-radius: 0px 10px 0px 10px;
+}
+
+.flexDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.social-icons {
+  color: #282c34;
+  transition: 1s;
+  margin: 5px;
+}
+
+.social-icons:hover {
+  transform: rotate(45deg);
+  color: #fb4b74;
 }
 
 .App-header {
@@ -130,5 +335,111 @@ h6 {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+#carouselAnimation {
+  animation: zoom 8s ease-in-out forwards;
+}
+
+#carouselText1 {
+  opacity: 0;
+  animation: bottom-to-top 0.5s ease-in forwards 1s;
+}
+
+#carouselText2 {
+  opacity: 0;
+  animation: bottom-to-top 0.5s ease-in forwards 2s;
+}
+
+#carouselBtn {
+  opacity: 0;
+  animation: bottom-to-top 0.5s ease-in forwards 3s;
+}
+
+@keyframes bottom-to-top {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoom {
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+
+input[type=text], input[type=email], textarea {
+  border: none;
+  padding: 15px 10px;
+  margin: 10px 0;
+}
+
+.checkbox{
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  cursor: pointer;
+}
+
+/* The container */
+label {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-top: 4px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+  border: 1px solid #fb4b74;
+}
+
+/* On mouse-over, add a grey background color */
+label:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+label input:checked ~ .checkmark {
+  background-color: #fb4b74;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+label:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+
+@media (max-width: 768px) {
+  #contact{
+    align-items: center !important;
+    text-align: center !important;
   }
 }

@@ -8,7 +8,7 @@ const COLORS = {
 }
 
 const SHADOW = {
-    boxShadow: "0px 2px 25px " + COLORS.grey
+    boxShadow: "0px 0px 20px " + COLORS.grey
 }
 
 export {COLORS, SHADOW}

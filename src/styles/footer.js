@@ -4,9 +4,10 @@ const footerStyle = {
     topContainer:{
         width: '100%',
         backgroundColor: COLORS.grey,
-        margin: "-10px auto"
+        margin: "0px auto"
     },
     title:{
+        marginTop: 20,
         color: "#ccc"
     },
     bottomContainer:{

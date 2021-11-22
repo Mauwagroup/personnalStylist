@@ -4,8 +4,8 @@ const homeStyle = {
     appointmentSection: {
         width: "100%",
         backgroundColor: "#fb4b7442",
-        marginTop: 130,
-        paddingBottom: 40
+        marginTop: 180,
+        paddingBottom: 0
     }
 }
 

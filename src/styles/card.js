@@ -11,13 +11,13 @@ const cardStyle = {
         padding: 30,
         marginTop: 10,
         backgroundColor: COLORS.white,
-        marginBottom: 10
+        marginBottom: 30
     },
     bottomContainer2: {
         width: '100%',
         height: "100%",
         padding: "10px 0 40px",
-        marginBottom: 10,
+        marginBottom: 30,
         textAlign: 'left'
     },
     text: {

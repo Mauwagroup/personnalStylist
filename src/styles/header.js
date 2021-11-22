@@ -18,6 +18,8 @@ const headerStyle = {
         borderTop: "1.6px solid #ccc",
         flexDirection: 'row',
         width: '85%',
+        boxShadow: "none",
+        transition: " padding 2s",
         margin: 'auto',
         alignItems: 'center',
         justifyContent: 'center',
