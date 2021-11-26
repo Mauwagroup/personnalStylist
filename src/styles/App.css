@@ -71,7 +71,7 @@ h6 {
   font-size: 0.9rem;
 }
 
-.contact-link{
+.contact-link {
   font-size: 0.9rem;
   color: #282c34;
   font-weight: 500;
@@ -87,10 +87,14 @@ h6 {
   border: 8px solid #fff;
 }
 
-.img-link{
+.img-link {
   position: relative;
   top: 0;
   left: 0;
+}
+
+.logo{
+  width: 100px;
 }
 
 .img-link h2 {
@@ -100,7 +104,7 @@ h6 {
   font-size: 0;
 }
 
-.img-link div{
+.img-link div {
   position: absolute;
   top: 0;
   left: 0;
@@ -122,18 +126,42 @@ h6 {
   font-size: 64px;
 }
 
+.filter-img {
+  transition: 1s;
+  filter: brightness(0.2);
+}
+
+.btn-remove {
+  width: 50%;
+  margin: 0;
+}
+
 .logo-visible {
   opacity: 0;
-  animation: show-logo .5s ease-in-out forwards;
+  font-size: 0;
+  animation: show-logo 0.5s ease-in-out forwards;
+}
+
+.animatedLogo{
+  width: 0;
+  animation: biggify 1.5s ease-in-out forwards;
+}
+
+@keyframes biggify {
+  100%{
+    width: 80px;
+  }
 }
 
 @keyframes show-logo {
   100% {
+    font-size: 1rem;
     opacity: 1;
   }
 }
 
 .logo-hidden {
+  font-size: 0;
   opacity: 0;
   animation: hide-logo 2s ease-in-out forwards;
 }
@@ -141,9 +169,9 @@ h6 {
 @keyframes hide-logo {
   100% {
     opacity: 0;
+    font-size: 0;
   }
 }
-
 
 .black-bg {
   width: 100%;
@@ -174,13 +202,13 @@ h6 {
   align-items: center;
   justify-content: center;
   z-index: 1;
-  width: 60px;
-  height: 50px;
+  width: 45px;
+  height: 40px;
   transition: 0.3s;
 }
 
 .basketWrapper {
-  height: 50px;
+  height: 40px;
   max-width: 0;
   transition: 0.7s;
   justify-content: center;
@@ -194,6 +222,8 @@ h6 {
 .basketIconText {
   color: white;
   margin: 0 5px;
+  transition: .5s;
+  font-size: 0;
 }
 
 .bIconContainer {
@@ -201,12 +231,16 @@ h6 {
 }
 
 .bIconContainer:hover .basketIconWrapper {
-  width: 70px;
+  width: 55px;
 }
 
 .bIconContainer:hover .basketWrapper {
   max-width: 500px;
   right: 0;
+}
+
+.bIconContainer:hover .basketIconText {
+  font-size: 0.9rem;
 }
 
 .grid {
@@ -256,6 +290,13 @@ h6 {
   height: 4px;
 }
 
+.separator2 {
+  margin: 30px auto;
+  border-top: 2px solid #797979;
+  width: 20%;
+  height: 1px;
+}
+
 .centerItem {
   display: flex;
   flex-direction: column;
@@ -284,11 +325,26 @@ h6 {
   transition: 1s;
 }
 
+.grey-text{
+  color: #adadad;
+  margin: 20px 0 10px;
+}
+
+.setting-container{
+  padding: 0 15px 20px;
+}
+
 .nav-link:hover,
 .active-link {
-  color: #fb4b74;
+  color: #fb4b74 !important;
   background-color: #63636333;
   border-radius: 10px 0 10px 0;
+}
+
+.dashboad-link {
+  color: #8a8a8a;
+  font-weight: bold !important;
+  margin: 8px auto;
 }
 
 .nav-link:hover {
@@ -314,6 +370,25 @@ h6 {
   color: #fb4b74;
 }
 
+.box {
+  border-radius: 20px;
+  width: 97%;
+  box-shadow: "0px 0px 20px #3D3D3D";
+  background-color: #3d3d3d;
+  padding: 20px 15px;
+}
+
+.main-container {
+  position: absolute;
+  width: 100%;
+  left: 15px;
+  top: 0;
+  right: 15px;
+  overflow-y: auto;
+  bottom: 15px;
+  padding-bottom: 30px;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -325,16 +400,33 @@ h6 {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.animatedInput{
+  background-color: #4e4e4e;
+  border-radius: 5px;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  width: 0;
+  animation: show-input 1s ease-in-out forwards;
+}
+
+.animatedInput::placeholder{
+  color: #adadad;
+}
+
+@keyframes show-input{
+  100%{
+    min-width: 200px;
+    width: 97%;
   }
 }
 
@@ -373,14 +465,17 @@ h6 {
   }
 }
 
-
-input[type=text], input[type=email], textarea {
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
   border: none;
   padding: 15px 10px;
   margin: 10px 0;
+  outline: none;
 }
 
-.checkbox{
+.checkbox {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -436,10 +531,47 @@ label input:checked ~ .checkmark:after {
   display: block;
 }
 
+.modal-backdrop {
+  z-index: -1;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background-color: #3d3d3d;
+}
+
+.btn {
+  margin: 0 5px;
+}
 
 @media (max-width: 768px) {
-  #contact{
+  #contact {
     align-items: center !important;
     text-align: center !important;
   }
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #3d3d3d; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #6d6d6d; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }

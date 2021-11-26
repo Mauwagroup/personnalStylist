@@ -11,4 +11,6 @@ const SHADOW = {
     boxShadow: "0px 0px 20px " + COLORS.grey
 }
 
-export {COLORS, SHADOW}
+const URL = "/personnalStylist/"
+
+export {COLORS, SHADOW, URL}

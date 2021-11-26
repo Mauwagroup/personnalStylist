@@ -49,7 +49,7 @@ export default function Video(props) {
             <br />
             <br />
 
-            <div className="row" style={{ margin: "40px auto" }}>
+            <div className="row centerItem" style={{ margin: "40px auto", flexDirection: "row" }}>
                 <div className="col-md-6">
                     <iframe width="100%" height="400px" src="https://www.youtube.com/embed/WJ3-F02-F_Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <h2 style={{ fontSize: "2rem", margin: "20px 0 40px" }}>A Day In The Life of Personal Stylist Emily West</h2>

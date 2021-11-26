@@ -5,38 +5,6 @@ import { homeStyle } from "../styles"
 
 export default function Testimonials(props) {
 
-    const [data, setData] = useState([{
-        img: "https://emberlyn.ancorathemes.com/wp-content/uploads/2017/07/single-1.1.jpg",
-        name: "Jane",
-        body: "Morbi et massa magna. Cras turpis mi, consectetur id turpis molestie, commodo ultrices mi. Nulla nec mi vitae est mollis malesuada. usce dictum lorem quam, quis aliquet nisl."
-    },
-    {
-        img: "https://emberlyn.ancorathemes.com/wp-content/uploads/2017/07/single-2.1.jpg",
-        name: "Adrian",
-        body: "Morbi et massa magna. Cras turpis mi, consectetur id turpis molestie, commodo ultrices mi. Nulla nec mi vitae est mollis malesuada. usce dictum lorem quam, quis aliquet nisl."
-    },
-    {
-        img: "https://emberlyn.ancorathemes.com/wp-content/uploads/2017/07/single-1.jpg",
-        name: "Amanda",
-        body: "Morbi et massa magna. Cras turpis mi, consectetur id turpis molestie, commodo ultrices mi. Nulla nec mi vitae est mollis malesuada. usce dictum lorem quam, quis aliquet nisl."
-    },
-    {
-        img: "https://emberlyn.ancorathemes.com/wp-content/uploads/2017/07/single-3.jpg",
-        name: "Laura",
-        body: "Morbi et massa magna. Cras turpis mi, consectetur id turpis molestie, commodo ultrices mi. Nulla nec mi vitae est mollis malesuada. usce dictum lorem quam, quis aliquet nisl."
-    },
-    {
-        img: "https://emberlyn.ancorathemes.com/wp-content/uploads/2017/07/single-5.jpg",
-        name: "Annie",
-        body: "Morbi et massa magna. Cras turpis mi, consectetur id turpis molestie, commodo ultrices mi. Nulla nec mi vitae est mollis malesuada. usce dictum lorem quam, quis aliquet nisl."
-    },
-    {
-        img: "https://emberlyn.ancorathemes.com/wp-content/uploads/2017/07/single-6_1.jpg",
-        name: "Mark",
-        body: "Morbi et massa magna. Cras turpis mi, consectetur id turpis molestie, commodo ultrices mi. Nulla nec mi vitae est mollis malesuada. usce dictum lorem quam, quis aliquet nisl."
-    }
-    ])
-
     function Card(data) {
         return <div className="col-md-6" style={{margin: "0 0px 40px" }}>
             <div style={{ display: "flex", flexDirection: "row", paddingBottom: "40px", borderBottom: "1px solid #ccc" }}>
@@ -59,7 +27,7 @@ export default function Testimonials(props) {
         <h2>What Clients Say</h2>
         <div className="separator" style={{ width: "8%" }} ></div>
         <div style={{ maxWidth: 1400, margin: "40px auto", padding: "0 20px"}}>
-            <div className="row">
+            <div className="row centerItem" style={{flexDirection: "row"}}>
                 {Card()}
                 {Card()}
                 {Card()}

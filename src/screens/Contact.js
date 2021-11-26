@@ -1,51 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Header, Footer, BottomHeader, Btn, BeforeCard } from "../components"
-import { COLORS, SHADOW } from "../constants"
+import { COLORS, SHADOW, URL } from "../constants"
 import { homeStyle } from "../styles"
 import Phone from "../assets/images/phone.png"
-import MaterialIcon from 'material-icons-react';
-import YouTubeIcon from '@material-ui/icons/YouTube';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import EmailIcon from '@material-ui/icons/Email';
-import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
-import AddressIcon from '@material-ui/icons/Room';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import EmailIcon from '@mui/icons-material/Email';
+import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
+import AddressIcon from '@mui/icons-material/Room';
 import { Link } from "react-router-dom";
+import {SettingStore} from "../redux"
 
 export default function Contact(props) {
 
-    const [data, setData] = useState([{
-        img: "https://emberlyn.ancorathemes.com/wp-content/uploads/2017/07/single-1.1.jpg",
-        name: "Jane",
-        body: "Morbi et massa magna. Cras turpis mi, consectetur id turpis molestie, commodo ultrices mi. Nulla nec mi vitae est mollis malesuada. usce dictum lorem quam, quis aliquet nisl."
-    },
-    {
-        img: "https://emberlyn.ancorathemes.com/wp-content/uploads/2017/07/single-2.1.jpg",
-        name: "Adrian",
-        body: "Morbi et massa magna. Cras turpis mi, consectetur id turpis molestie, commodo ultrices mi. Nulla nec mi vitae est mollis malesuada. usce dictum lorem quam, quis aliquet nisl."
-    },
-    {
-        img: "https://emberlyn.ancorathemes.com/wp-content/uploads/2017/07/single-1.jpg",
-        name: "Amanda",
-        body: "Morbi et massa magna. Cras turpis mi, consectetur id turpis molestie, commodo ultrices mi. Nulla nec mi vitae est mollis malesuada. usce dictum lorem quam, quis aliquet nisl."
-    },
-    {
-        img: "https://emberlyn.ancorathemes.com/wp-content/uploads/2017/07/single-3.jpg",
-        name: "Laura",
-        body: "Morbi et massa magna. Cras turpis mi, consectetur id turpis molestie, commodo ultrices mi. Nulla nec mi vitae est mollis malesuada. usce dictum lorem quam, quis aliquet nisl."
-    },
-    {
-        img: "https://emberlyn.ancorathemes.com/wp-content/uploads/2017/07/single-5.jpg",
-        name: "Annie",
-        body: "Morbi et massa magna. Cras turpis mi, consectetur id turpis molestie, commodo ultrices mi. Nulla nec mi vitae est mollis malesuada. usce dictum lorem quam, quis aliquet nisl."
-    },
-    {
-        img: "https://emberlyn.ancorathemes.com/wp-content/uploads/2017/07/single-6_1.jpg",
-        name: "Mark",
-        body: "Morbi et massa magna. Cras turpis mi, consectetur id turpis molestie, commodo ultrices mi. Nulla nec mi vitae est mollis malesuada. usce dictum lorem quam, quis aliquet nisl."
-    }
-    ])
+    const [data, setData] = useState({})
+
+    useEffect(() => {
+        setData(SettingStore.getState().data)
+    }, [])
 
     return <div>
         <Header active="contact" />
@@ -61,18 +35,18 @@ export default function Contact(props) {
                     <h4 style={{ fontWeight: 'bold', fontStyle: "italic", color: COLORS.accent }}>Let's Get In Touch</h4>
                     <h2>Contact Info</h2>
                     <div className="separator" style={{ width: "12%", margin: "30px 0" }} ></div>
-                    <h5>Please contact Emily direct for further information including an arrangement of any personal style service.</h5><br />
-                    <h6><AddressIcon fontSize="small" style={{ color: COLORS.accent }} /> 123 Pearl Street, New York, NY 10001</h6>
+                    <h5>Please contact Emily directly for further information including an arrangement of any personal style service.</h5><br />
+                    <h6><AddressIcon fontSize="small" style={{ color: COLORS.accent }} /> {data?.address}</h6>
                     <h6>
-                        <Link to="#" className="contact-link" ><PhoneAndroidIcon fontSize="small" style={{ color: COLORS.accent }} /> 099 000 0000</Link>
+                        <Link to="#" className="contact-link" ><PhoneAndroidIcon fontSize="small" style={{ color: COLORS.accent }} /> {data?.tell}</Link>
                     </h6>
-                    <Link to="#" className="contact-link" ><EmailIcon fontSize="small" style={{ color: COLORS.accent }} /> name@example.com</Link>
+                    <Link to="#" className="contact-link" ><EmailIcon fontSize="small" style={{ color: COLORS.accent }} /> {data?.email}</Link>
                     <br />
                     <div className="flexDiv">
-                        <a className="social-icons" style={{ marginLeft: 0 }}> <FacebookIcon fontSize={"medium"} /> </a>
-                        <a className="social-icons"> <InstagramIcon fontSize={"medium"} /> </a>
-                        <a className="social-icons"> <TwitterIcon fontSize={"medium"} /> </a>
-                        <a className="social-icons"> <YouTubeIcon fontSize={"medium"} /> </a>
+                        <a target="_blank" rel="noreferrer" href={data?.facebook} className="social-icons" style={{ marginLeft: 0 }}> <FacebookIcon fontSize={"medium"} /> </a>
+                        <a target="_blank" rel="noreferrer" href={data?.instagram} className="social-icons"> <InstagramIcon fontSize={"medium"} /> </a>
+                        <a target="_blank" rel="noreferrer" href={data?.twitter} className="social-icons"> <TwitterIcon fontSize={"medium"} /> </a>
+                        <a target="_blank" rel="noreferrer" href={data?.youtube} className="social-icons"> <YouTubeIcon fontSize={"medium"} /> </a>
                     </div>
                 </div>
             </div>

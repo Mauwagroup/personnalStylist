@@ -47,7 +47,7 @@ export default function Before(props) {
         <h2>Style Transformations</h2>
         <div className="separator" style={{ width: "8%" }} ></div>
         <div style={{marginBottom: 100}}>
-            <div className="row" style={{ margin: "20px auto 60px", maxWidth: 1200 }}>
+            <div className="row centerItem" style={{ margin: "20px auto 60px", maxWidth: 1200, flexDirection: "row" }}>
                 {data.map((item, index) => {
                     return <div className="col-md-6" key={index}>
                         {BeforeCard(item)}
